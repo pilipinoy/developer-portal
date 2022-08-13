@@ -40,7 +40,7 @@ Therefore, the payment signing key (the private component of the [Cardano wallet
 
   - A standard assumption in security is that *any* Internet connection on *any* computer creates opportunities for malicious people or programs to copy, view, or modify *anything* unencrypted on that computer.
   - Unlike transactions with cryptocurrenty wallet software, in which the wallet's private payment keys are carefully encrypted and securely managed, the payment key (in this documentation, `payment.skey`) used for the raw transactions of development & stake pool operations is *not encrypted*.
-  - This means that this file stored anywhere on your Internet connected computer or server, even for an instant, creates an opportunity the funds at that address (`payment.addr`) to be ***lost***.
+  - This means that this file stored anywhere on your Internet connected computer or server, even for an instant, creates an opportunity for the funds at that address (`payment.addr`) to be ***lost***.
 
 ## Prerequisites
 
@@ -68,7 +68,7 @@ Format a memory stick on a machine you believe to be secure, and then format it 
 
 This is rewritten from page [Create Simple Transaction](../stake-pool-course/handbook/create-simple-transaction) (only considered secure to run on testnet) with the following exception:
 
-  - [Determinng the TTL (time to Live)](../stake-pool-course/handbook/create-simple-transaction#determine-the-ttl-time-to-live-for-the-transaction) for the transaction is omitted, along with setting this value in the transaction itself, to simplify the information-gathering step.
+  - [Determining the TTL (time to Live)](../stake-pool-course/handbook/create-simple-transaction#determine-the-ttl-time-to-live-for-the-transaction) for the transaction is omitted, along with setting this value in the transaction itself, to simplify the information-gathering step.
   - This poses no security risk since an omitted TTL value allows a Tx file to be used indefinitely *but* submitting that Tx will change the UTxO set so that submitting that transaction again will be impossible.
 
 Also note that in general your "Internet connected machine" and your "Cardano node" will be two separate systems, and you will have to transfer files from one to the other with programs like [`rsync`](https://linux.die.net/man/1/rsync).
